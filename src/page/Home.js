@@ -1,4 +1,6 @@
 import React from "react";
+import KnowledgeCardList from "../component/KnowledgeCardList";
+import CategoryCard from "../component/CategoryCard";
 
 function Home() {
   return (
@@ -17,10 +19,9 @@ function Home() {
           </nav>
         </div>
       </header>
-      <div
-        style={{ width: "100%", height: 400, backgroundColor: "black" }}
-      ></div>
+      <CategoryCard name={"ビジネススキル"} id={"business"} />
       <p>Home</p>
+      <KnowledgeCardList />
     </div>
   );
 }
