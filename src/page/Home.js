@@ -1,6 +1,6 @@
 import React from "react";
 import KnowledgeCardList from "../component/KnowledgeCardList";
-import CategoryCard from "../component/CategoryCard";
+import CategoryCardList from "../component/CategoryCardList";
 
 function Home() {
   return (
@@ -19,7 +19,7 @@ function Home() {
           </nav>
         </div>
       </header>
-      <CategoryCard name={"ビジネススキル"} id={"business"} />
+      <CategoryCardList />
       <p>Home</p>
       <KnowledgeCardList />
     </div>
