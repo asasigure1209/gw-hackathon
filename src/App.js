@@ -1,27 +1,26 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import "./css/App.scss";
+import Home from "./component/Home";
+import Category from "./component/Category";
+import Login from "./component/Login";
+import Signup from "./component/Signup";
 
 function App() {
   return (
-    <div className='App'>
-      <header className='l-header c-header'>
-        <div className='l-justify-spaceBetween c-header__content'>
-          <div className='c-header__logo'>
-            <span>時雨記</span>
-          </div>
-          <nav className='c-header__menu'>
-            <ul className='l-justify-left c-menu'>
-              <li className='c-menu__list'>トップ</li>
-              <li className='c-menu__list'>アバウト</li>
-              <li className='c-menu__list'>記事検索</li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <div
-        style={{ width: "100%", height: 400, backgroundColor: "black" }}
-      ></div>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/categories/:category" component={Category} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/signup" component={Signup} />
+      </Switch>
+    </Router>
   );
 }
 
