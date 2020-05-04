@@ -6,10 +6,10 @@ import {
   Link
 } from "react-router-dom";
 import "./css/App.scss";
-import Home from "./component/Home";
-import Category from "./component/Category";
-import Login from "./component/Login";
-import Signup from "./component/Signup";
+import Home from "./page/Home";
+import Category from "./page/Category";
+import Login from "./page/Login";
+import Signup from "./page/Signup";
 
 function App() {
   return (
