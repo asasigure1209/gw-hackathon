@@ -1,7 +1,7 @@
 import React from "react";
 
 function LogoutButton() {
-  return <button>ログアウト</button>;
+  return <button className='c-header__btn'>ログアウト</button>;
 }
 
 export default LogoutButton;
