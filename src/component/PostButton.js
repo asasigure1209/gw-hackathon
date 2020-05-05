@@ -1,7 +1,7 @@
 import React from "react";
 
 function PostButton({ onClick }) {
-  return <button onClick={onClick}>投稿する</button>;
+  return <button className='c-fab' onClick={onClick}>Knowledge</button>;
 }
 
 export default PostButton;
