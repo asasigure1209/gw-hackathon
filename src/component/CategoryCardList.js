@@ -1,13 +1,14 @@
 import React, { Fragment } from "react";
 import CategoryCard from "./CategoryCard";
+import categories from "../constans/categories";
 
 function CategoryCardList() {
   return (
     <Fragment>
-      <CategoryCard name={"ビジネススキル"} id={"business"} />
-      <CategoryCard name={"マイライフ"} id={"mylife"} />
-      <CategoryCard name={"コミュニケーション"} id={"comminucation"} />
-      <CategoryCard name={"その他"} id={"etc"} />
+      <CategoryCard id={categories.business} />
+      <CategoryCard id={categories.mylife} />
+      <CategoryCard id={categories.comminucation} />
+      <CategoryCard id={categories.etc} />
     </Fragment>
   );
 }
