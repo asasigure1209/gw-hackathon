@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function CategoryCard({ id }) {
   return (
     <Link to={`/categories/${id}`}>
-      <img src={`${id}.jpg`} alt='カテゴリ'></img>
+      <img src={`/${id}.jpg`} alt='カテゴリ'></img>
     </Link>
   );
 }

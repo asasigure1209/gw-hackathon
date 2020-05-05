@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import categories from "../constans/categories";
+import { categoryId } from "../constans/categories";
 import axios from "axios";
 
 const url = "http://localhost:3004/posts";
 
 function PostForm({ onClick }) {
   const [content, setContent] = useState("");
-  const [category, setCategory] = useState(categories.etc);
+  const [category, setCategory] = useState(categoryId.etc);
 
   const sendPostData = () => {
     let params = new URLSearchParams();
@@ -42,10 +42,10 @@ function PostForm({ onClick }) {
       <h2>Daisuke Hasegawa</h2>
       <div>
         <select value={category} onChange={handleChangeCategory}>
-          <option value={categories.business}>ビジネススキル</option>
-          <option value={categories.comminucation}>コミュニケーション</option>
-          <option value={categories.mylife}>マイライフ</option>
-          <option value={categories.etc}>つぶやき</option>
+          <option value={categoryId.business}>ビジネススキル</option>
+          <option value={categoryId.comminucation}>コミュニケーション</option>
+          <option value={categoryId.mylife}>マイライフ</option>
+          <option value={categoryId.etc}>つぶやき</option>
         </select>
         <textarea value={content} onChange={handleChangeContent}></textarea>
         <button onClick={sendPostData} disabled={isClick}>
