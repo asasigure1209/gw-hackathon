@@ -8,7 +8,7 @@
   width: auto;
   height: 56px;
   background: $kip-green;
-  @include kip-font-h5;
+  @include kip-font-button;
   color: $kip-white;
   text-align: center;
   transition: .3s;

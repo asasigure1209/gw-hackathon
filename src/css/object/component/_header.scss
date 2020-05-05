@@ -39,8 +39,14 @@
 
 .c-header__btn{
   padding: 7px 10px;
-  @include kip-font-body2;
+  @include kip-font-button;
   color: $kip-black-2;
   border: 1px solid $kip-black-4;
+  transition: .3s;
   border-radius: 8px;
+}
+
+.c-header__btn:hover {
+  background-color: $kip-green;
+  color: $kip-white;
 }
