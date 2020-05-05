@@ -1,5 +1,4 @@
 {
     "prettier.jsxSingleQuote": true,
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2,
+    "editor.formatOnSave": false "editor.tabSize": 2,
 }

@@ -23,8 +23,6 @@ function Category({ match }) {
 
   const isClickSub = offset <= 0;
 
-  console.log(offset);
-
   return (
     <div className='App'>
       <div className='global'>

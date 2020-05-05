@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { categoryId } from "../constans/categories";
 import axios from "axios";
 
-const url = "http://localhost:3004/posts";
+const url = "http://localhost:8000/posts";
 
 function PostForm({ onClick }) {
   const [content, setContent] = useState("");

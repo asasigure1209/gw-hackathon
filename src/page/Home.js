@@ -9,8 +9,18 @@ import PostModal from "../component/PostModal";
 
 function Home() {
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [offset, setOffset] = useState(0);
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
+
+  const increment = () => {
+    setOffset(offset + 1);
+  };
+  const decrement = () => {
+    setOffset(offset - 1);
+  };
+
+  const isClickSub = offset <= 0;
 
   return (
     <div className='App'>
@@ -33,9 +43,13 @@ function Home() {
             <KnowledgeCardList
               type={postOrderTypes.new}
               category={categoryId.all}
-              offset={0}
+              offset={4 * offset}
               limit={4}
             />
+            <button onClick={decrement} disabled={isClickSub}>
+              前
+            </button>
+            <button onClick={increment}>次</button>
             <PostButton onClick={openModal} />
             <PostModal isOpen={modalIsOpen} onClick={closeModal}></PostModal>
           </div>
