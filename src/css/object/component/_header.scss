@@ -9,8 +9,10 @@
   margin: 0 auto;
 }
 
-.c-header__logo {
-  font-size: 24px;
+.c-logo {
+  width: 124px;
+  height: 84px;
+  margin-bottom:60px;
 }
 
 .c-header__content {
@@ -50,3 +52,4 @@
   background-color: $kip-green;
   color: $kip-white;
 }
+
