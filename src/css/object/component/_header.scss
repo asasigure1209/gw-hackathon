@@ -1,6 +1,9 @@
 .c-header {
-  height: 64px;
-  background-color: white;
+  padding: 60px 60px 40px 40px;
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  background-color: $kip-white;
 }
 
 .c-header__logo {

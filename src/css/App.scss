@@ -4,7 +4,7 @@
 
 @import "foundation/reset";
 @import "foundation/base";
-
+@import "foundation/global";
 // ==========================================================================
 // Layout
 // ==========================================================================
@@ -21,6 +21,9 @@
 
 @import "object/component/header";
 @import "object/component/navigation";
+@import "object/component/main";
+@import "object/component/knowledgecard";
+@import "object/component/fab";
 
 // -----------------------------------------------------------------
 // Project

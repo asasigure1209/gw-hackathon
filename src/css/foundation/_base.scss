@@ -3,14 +3,13 @@ $kip-green: #00838E;
 $kip-black-1: #37383A;
 $kip-black-2: rgba(55,56,58,0.54);
 $kip-black-3: rgba(55,56,58,0.26);
-$kip-black-2: rgba(55,56,58,0.12);
+$kip-black-4: rgba(55,56,58,0.12);
 $kip-white: #FFF;
 $kip-alto-1: #F1F1F1;
 $kip-alto-2: #E4E4E4;
 
-//font
-
-.kip-font-h1 {
+//fontstyle
+@mixin kip-font-h1 {
   font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -19,7 +18,7 @@ $kip-alto-2: #E4E4E4;
   letter-spacing: -0.015em;
 }
 
-.kip-font-h2 {
+@mixin kip-font-h2 {
   font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -28,7 +27,7 @@ $kip-alto-2: #E4E4E4;
   letter-spacing: -0.005em;
 }
 
-.kip-font-h3 {
+@mixin kip-font-h3 {
   font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -36,7 +35,7 @@ $kip-alto-2: #E4E4E4;
   line-height: 71px;
 }
 
-.kip-font-h4 {
+@mixin kip-font-h4 {
   font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -45,7 +44,7 @@ $kip-alto-2: #E4E4E4;
   letter-spacing: 0.0025em;
 }
 
-.kip-font-h5 {
+@mixin kip-font-h5 {
   font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -53,7 +52,7 @@ $kip-alto-2: #E4E4E4;
   line-height: 36px;
 }
 
-.kip-font-h6 {
+@mixin kip-font-h6 {
   font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -62,7 +61,7 @@ $kip-alto-2: #E4E4E4;
   letter-spacing: 0.0015em;
 }
 
-.kip-font-subtitle1 {
+@mixin kip-font-subtitle1 {
   font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -71,7 +70,7 @@ $kip-alto-2: #E4E4E4;
   letter-spacing: 0.005em;
 }
 
-.kip-font-subtitle2 {
+@mixin kip-font-subtitle2 {
   font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -80,7 +79,7 @@ $kip-alto-2: #E4E4E4;
   letter-spacing: 0.001em;
 }
 
-.kip-font-body1 {
+@mixin kip-font-body1 {
   font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -89,7 +88,7 @@ $kip-alto-2: #E4E4E4;
   letter-spacing: 0.005em;
 }
 
-.kip-font-body2{
+@mixin kip-font-body2{
   font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -98,7 +97,7 @@ $kip-alto-2: #E4E4E4;
   letter-spacing: 0.0025em;
 }
 
-.kip-font-button {
+@mixin kip-font-button {
   font-family: 'Noto Sans JP', sans-serif;
   font-family: Noto Sans CJK JP;
   font-style: normal;
@@ -108,7 +107,7 @@ $kip-alto-2: #E4E4E4;
   letter-spacing: 0.0125em;
 }
 
-.kip-font-caption {
+@mixin kip-font-caption {
   font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -117,7 +116,7 @@ $kip-alto-2: #E4E4E4;
   letter-spacing: 0.004em;
 }
 
-.kip-font-overline {
+@mixin kip-font-overline {
   font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
   font-weight: normal;
