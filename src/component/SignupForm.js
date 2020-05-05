@@ -17,11 +17,11 @@ function SignupForm() {
 
   return (
     <div>
-      <h2>REGISTER</h2>
+      <h2>Register</h2>
       <img
         src={imageSrc}
         alt='登録するアカウント画像'
-        style={{ width: "100px", height: "100px", objectFit: "cover" }}
+        style={{ width: "65px", height: "65px", objectFit: "cover" }}
       />
       <input
         type='file'
