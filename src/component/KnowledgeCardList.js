@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
-import KnowledgeCard from "./KnowledgeCard";
 import axios from "axios";
+import KnowledgeCard from "./KnowledgeCard";
 
 const url = "http://localhost:3004/posts";
 
