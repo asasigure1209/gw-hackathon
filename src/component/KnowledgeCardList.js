@@ -12,7 +12,6 @@ function KnowledgeCardList(params) {
     // テスト用
     axios.get(url).then((res) => {
       setKnowledges(res.data);
-      console.log(params);
     });
     //本番
     // axios
