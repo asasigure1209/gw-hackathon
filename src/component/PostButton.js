@@ -1,7 +1,7 @@
 import React from "react";
 
-function PostButton() {
-  return <button>投稿する</button>;
+function PostButton({ onClick }) {
+  return <button onClick={onClick}>投稿する</button>;
 }
 
 export default PostButton;

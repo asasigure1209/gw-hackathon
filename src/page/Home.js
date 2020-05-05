@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "react-modal";
 import KnowledgeCardList from "../component/KnowledgeCardList";
 import CategoryCardList from "../component/CategoryCardList";
 import categories from "../constans/categories";
 import postOrderTypes from "../constans/postOrderTypes";
 import PostButton from "../component/PostButton";
 import LogoutButton from "../component/LogoutButton";
+import PostModal from "../component/PostModal";
 
 function Home() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
   return (
     <div className='App'>
       <CategoryCardList />
       <LogoutButton />
-      <PostButton />
+      <PostButton onClick={openModal} />
+      <PostModal isOpen={modalIsOpen} onClick={closeModal}></PostModal>
       <h1>人気のナレッジ</h1>
       <KnowledgeCardList
         type={postOrderTypes.popular}
