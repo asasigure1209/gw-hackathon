@@ -8,8 +8,12 @@ $kip-white: #FFF;
 $kip-alto-1: #F1F1F1;
 $kip-alto-2: #E4E4E4;
 
-//font
+//background-color
+.App {
+  background-color: $kip-alto-1;
+}
 
+//fontstyle
 .kip-font-h1 {
   font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
