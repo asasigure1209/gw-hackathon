@@ -19,5 +19,23 @@
 }
 
 .l-header {
-  width: 100%;
+  position: fixed;
+  float: left;
+}
+
+.l-main {
+  background-color: $kip-white;
+  float: right;
+}
+
+.l-contents{
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
