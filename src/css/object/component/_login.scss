@@ -1,0 +1,61 @@
+.c-login{
+  width: 100%;
+  max-width: 400px;
+  background-color:$kip-white;
+  padding: 30px 40px 60px;
+  border-radius: 24px;
+  border: 1px solid $kip-black-4;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 10px $kip-black-4;
+
+
+}
+
+.c-login h2{
+  @include kip-font-h5;
+  color: $kip-black-1;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.c-login label{
+  @include kip-font-caption;
+  color: $kip-green;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.c-login input {
+  width: 290px;
+  height: 40px;
+  padding: 8px 15px;
+  background-color: $kip-alto-1;
+  border: 1px solid $kip-alto-1;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.c-login .loginbtn {
+  display: block;
+  padding: 7px 10px;
+  margin: 20px auto 15px;
+  @include kip-font-button;
+  background-color: $kip-green;
+  color: $kip-white;
+  border: 1px solid $kip-black-4;
+  transition: .3s;
+  border-radius: 8px;
+
+}
+.c-login .registerbtn {
+  display: block;
+  padding: 7px 10px;
+  margin: 0 auto ;
+  @include kip-font-button;
+  color: $kip-black-2;
+  border: 1px solid $kip-black-4;
+  transition: .3s;
+  border-radius: 8px;
+}
+
