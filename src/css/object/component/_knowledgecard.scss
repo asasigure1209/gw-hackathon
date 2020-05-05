@@ -17,6 +17,8 @@
 .c-knowledgecard img{
   margin: 0;
   padding-left: 15px;
+  border-radius: 50%;
+  float: left;
 }
 
 .c-knowledgecard h2{
@@ -70,4 +72,8 @@
   margin: 0;
   border: 1px solid $kip-black-4;
   border-radius: 8px;
+}
+
+.c-knowledgecard .c-knowledge{
+  float: right;
 }
