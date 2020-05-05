@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Modal from "react-modal";
 import KnowledgeCardList from "../component/KnowledgeCardList";
 import CategoryCardList from "../component/CategoryCardList";
 import categories from "../constans/categories";
