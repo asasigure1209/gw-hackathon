@@ -15,8 +15,7 @@
 }
 
 .c-knowledgecard img{
-  margin: 0;
-  padding-left: 15px;
+  padding-right: 15px;
   border-radius: 50%;
   float: left;
 }
@@ -44,11 +43,13 @@
   margin: 0 10px 0 0;
   border: 1px solid $kip-black-4;
   border-radius: 50vh;
+  float: left;
 }
 
 .c-knowledgecard .contents{
   @include kip-font-body1;
   color: $kip-black-1;
+  padding-bottom:30px;
   margin: 0;
 }
 
@@ -74,6 +75,6 @@
   border-radius: 8px;
 }
 
-.c-knowledgecard .c-knowledge{
-  float: right;
+.c-right{
+float: right;
 }
