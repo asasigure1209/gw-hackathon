@@ -7,3 +7,40 @@ $kip-black-2: rgba(55,56,58,0.12);
 $kip-white: #FFF;
 $kip-alto-1: #F1F1F1;
 $kip-alto-2: #E4E4E4;
+
+//font
+
+.kip-font-h1 {
+  @include kip-font
+  font-style: normal;
+  font-weight: 300;
+  font-size: 96px;
+  line-height: 142px;
+  /* identical to box height */
+  letter-spacing: -0.015em;
+}
+
+.kip-font-h2 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 89px;
+  /* identical to box height */
+  letter-spacing: -0.005em;
+}
+
+.kip-font-h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 71px;
+}
+
+.kip-font-h4 {
+font-style: normal;
+font-weight: normal;
+font-size: 34px;
+line-height: 50px;
+letter-spacing: 0.0025em;
+}
+
