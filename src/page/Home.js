@@ -15,24 +15,30 @@ function Home() {
 
   return (
     <div className='App'>
-      <CategoryCardList />
-      <LogoutButton />
-      <PostButton onClick={openModal} />
-      <PostModal isOpen={modalIsOpen} onClick={closeModal}></PostModal>
-      <h1>人気のナレッジ</h1>
-      <KnowledgeCardList
-        type={postOrderTypes.popular}
-        category={categories.all}
-        offset={0}
-        limit={1}
-      />
-      <h1>新着のナレッジ</h1>
-      <KnowledgeCardList
-        type={postOrderTypes.new}
-        category={categories.all}
-        offset={0}
-        limit={4}
-      />
+      <div className='l-contents clearfix'>
+        <div className='l-header'>
+          <CategoryCardList />
+        </div>
+        <LogoutButton />
+        <PostButton onClick={openModal} />
+        <PostModal isOpen={modalIsOpen} onClick={closeModal}></PostModal>
+        <div className='l-main'>
+          <h1>人気のナレッジ</h1>
+          <KnowledgeCardList
+            type={postOrderTypes.popular}
+            category={categories.all}
+            offset={0}
+            limit={1}
+          />
+          <h1>新着のナレッジ</h1>
+          <KnowledgeCardList
+            type={postOrderTypes.new}
+            category={categories.all}
+            offset={0}
+            limit={4}
+          />
+        </div>
+      </div>
     </div>
   );
 }
