@@ -3,11 +3,15 @@ import KnowledgeCardList from "../component/KnowledgeCardList";
 import CategoryCardList from "../component/CategoryCardList";
 import categories from "../constans/categories";
 import postOrderTypes from "../constans/postOrderTypes";
+import PostButton from "../component/PostButton";
+import LogoutButton from "../component/LogoutButton";
 
 function Home() {
   return (
     <div className='App'>
       <CategoryCardList />
+      <LogoutButton />
+      <PostButton />
       <h1>人気のナレッジ</h1>
       <KnowledgeCardList
         type={postOrderTypes.popular}
