@@ -1,5 +1,14 @@
 .c-main {
+  padding: 90px 60px 40px 40px;
   width: 100%;
   max-width: 800px;
   background-color: $kip-white;
 }
+
+.c-main h1 {
+@include kip-font-h5;
+color: $kip-black-1;
+margin: 0;
+padding-bottom: 40px;
+}
+
