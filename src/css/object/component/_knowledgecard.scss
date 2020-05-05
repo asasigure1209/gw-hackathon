@@ -1,0 +1,73 @@
+.c-knowledgecard{
+  padding: 20px;
+  background-color: $kip-white;
+  border-radius: 24px;
+  margin-bottom:20px;
+  border: 1px solid $kip-black-4;
+  box-shadow: 0px 1px 10px $kip-black-4;
+}
+
+.c-knowledgecard h2{
+  @include kip-font-h6;
+  color: $kip-black-1;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.c-knowledgecard img{
+  margin: 0;
+  padding-left: 15px;
+}
+
+.c-knowledgecard h2{
+  @include kip-font-h6;
+  color: $kip-black-1;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.c-knowledgecard .created{
+  @include kip-font-body2;
+  color: $kip-black-2;
+  margin: 0;
+}
+
+.c-knowledgecard .category{
+  display:inline-block;
+  flex-direction: row;
+  padding: 10px 15px;
+  @include kip-font-body2;
+  background-color: $kip-green;
+  color: $kip-white;
+  margin: 0 10px 0 0;
+  border: 1px solid $kip-black-4;
+  border-radius: 50vh;
+}
+
+.c-knowledgecard .contents{
+  @include kip-font-body1;
+  color: $kip-black-1;
+  margin: 0;
+}
+
+.c-knowledgecard .useful{
+  display:inline-block;
+  flex-direction: row;
+  padding: 7px 10px;
+  @include kip-font-body2;
+  color: $kip-green;
+  margin: 0 10px 0 0;
+  border: 1px solid $kip-black-4;
+  border-radius: 8px;
+}
+
+.c-knowledgecard .good{
+  display:inline-block;
+  flex-direction: row;
+  padding: 7px 10px;
+  @include kip-font-body2;
+  color: $kip-green;
+  margin: 0;
+  border: 1px solid $kip-black-4;
+  border-radius: 8px;
+}
