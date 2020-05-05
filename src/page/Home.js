@@ -16,12 +16,11 @@ function Home() {
   return (
     <div className='App'>
       <div className='l-contents clearfix'>
-        <div className='l-header'>
+        <div className='l-header c-header'>
           <CategoryCardList />
+          <LogoutButton />
         </div>
-        <LogoutButton />
-        <PostButton onClick={openModal} />
-        <PostModal isOpen={modalIsOpen} onClick={closeModal}></PostModal>
+
         <div className='l-main'>
           <h1>人気のナレッジ</h1>
           <KnowledgeCardList
@@ -37,6 +36,8 @@ function Home() {
             offset={0}
             limit={4}
           />
+          <PostButton onClick={openModal} />
+          <PostModal isOpen={modalIsOpen} onClick={closeModal}></PostModal>
         </div>
       </div>
     </div>

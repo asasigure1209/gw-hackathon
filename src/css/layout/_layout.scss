@@ -19,22 +19,18 @@
 }
 
 .l-header {
-  margin: 40px;
-  width: 400px;
-  height: 100;
-  background-color: $kip-white;
+  position: fixed;
   float: left;
 }
 
 .l-main {
-  margin :40px;
   width: 800px;
   background-color: $kip-white;
   float: right;
 }
 
 .l-contents{
-  width: 1300px;
+  width: 1200px;
   max-width: 100%;
   margin: 0 auto;
 
