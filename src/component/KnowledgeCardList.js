@@ -1,19 +1,28 @@
 import React, { Fragment, useState, useEffect } from "react";
-import KnowledgeCard from "./KnowledgeCard";
 import axios from "axios";
+import KnowledgeCard from "./KnowledgeCard";
 
 const url = "http://localhost:3004/posts";
 
-function KnowledgeCardList() {
+function KnowledgeCardList(params) {
   const [knowledges, setKnowledges] = useState();
 
   useEffect(() => {
     // api呼び出してナレッジを取得
+    // テスト用
     axios.get(url).then((res) => {
       setKnowledges(res.data);
-      console.log(res.data);
+      console.log(params);
     });
-  }, []);
+    //本番
+    // axios
+    //   .get(url, {
+    //     params,
+    //   })
+    //   .then((res) => {
+    //     setKnowledges(res.data);
+    //   });
+  }, [params]);
 
   // ナレッジカードの作成
   const knowledgeCardList = (knowledges) => {
