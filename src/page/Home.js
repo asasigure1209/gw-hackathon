@@ -21,7 +21,7 @@ function Home() {
           <LogoutButton />
         </div>
 
-        <div className='l-main'>
+        <div className='l-main c-main'>
           <h1>人気のナレッジ</h1>
           <KnowledgeCardList
             type={postOrderTypes.popular}
