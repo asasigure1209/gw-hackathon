@@ -1,0 +1,17 @@
+.c-mainimg {
+  width: 724px;
+  height: 595px;
+}
+
+.c-lp {
+  width: 724px;
+  display: block;
+  margim: 0 auto;
+  text-align: center;
+}
+
+.c-lp p {
+  @include kip-font-body1;
+  color: $kip-black-1;
+  margin: 0 auto;
+}

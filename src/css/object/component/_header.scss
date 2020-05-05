@@ -9,8 +9,10 @@
   margin: 0 auto;
 }
 
-.c-header__logo {
-  font-size: 24px;
+.c-logo {
+  width: 124px;
+  height: 84px;
+  margin-bottom:60px;
 }
 
 .c-header__content {
@@ -30,13 +32,24 @@
   height: 134px;
   margin-bottom: 40px;
   border-radius: 24px;
+  transition: .3s;
   box-shadow: 0px 1px 10px $kip-black-4;
+}
+.c-header__categoryimg:hover {
+  box-shadow: 0 4px 5px 0 $kip-black-4, 0 1px 10px 0 $kip-black-4, 0 2px 4px -1px $kip-black-4;
 }
 
 .c-header__btn{
   padding: 7px 10px;
-  @include kip-font-body2;
+  @include kip-font-button;
   color: $kip-black-2;
   border: 1px solid $kip-black-4;
+  transition: .3s;
   border-radius: 8px;
 }
+
+.c-header__btn:hover {
+  background-color: $kip-green;
+  color: $kip-white;
+}
+

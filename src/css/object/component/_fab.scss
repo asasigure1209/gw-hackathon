@@ -8,9 +8,13 @@
   width: auto;
   height: 56px;
   background: $kip-green;
-  @include kip-font-h5;
+  @include kip-font-button;
   color: $kip-white;
   text-align: center;
   transition: .3s;
   box-shadow: 0 2px 4px $kip-black-4, 0 2px 4px $kip-black-2;
+}
+
+.c-fab:hover {/*ホバー時の影*/
+  box-shadow: 0 4px 5px 0 $kip-black-4, 0 1px 10px 0 $kip-black-4, 0 2px 4px -1px $kip-black-4;
 }

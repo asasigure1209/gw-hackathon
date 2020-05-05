@@ -16,28 +16,38 @@ function SignupForm() {
   };
 
   return (
-    <div>
-      <h2>REGISTER</h2>
-      <img
-        src={imageSrc}
-        alt='登録するアカウント画像'
-        style={{ width: "100px", height: "100px", objectFit: "cover" }}
-      />
-      <input
-        type='file'
-        accept='image/*'
-        onChange={handleChangeImageFile}
-      ></input>
-      <label>User Image</label>
-      <label>User Name</label>
-      <input type='text' name='name'></input>
-      <label>Login ID</label>
-      <input type='text' name='id'></input>
-      <label>Password</label>
-      <input type='password' name='password'></input>
-      <button type='button'>登録</button>
-      <button type='button'>キャンセル</button>
+    <div className='global clearfix'>
+      <div className='l-contents'>
+        <div className='l-lp c-lp'>
+          <p>ナレッジ共有サービス</p>
+          <img className='c-logo' src='/kip_logo.png'></img>
+          <img className='l-mainimg c-mainimg' src='/kip_main.png'></img>
+        </div>
+        <div className='l-login c-login'>
+          <h2>Register</h2>
+          <img
+            src={imageSrc}
+            alt='登録するアカウント画像'
+            style={{ width: "65px", height: "65px", objectFit: "cover" }}
+          />
+          <input
+            type='file'
+            accept='image/*'
+            onChange={handleChangeImageFile}
+          ></input>
+          <label>User Image</label>
+          <label>User Name</label>
+          <input type='text' name='name'></input>
+          <label>Login ID</label>
+          <input type='text' name='id'></input>
+          <label>Password</label>
+          <input type='password' name='password'></input>
+          <button className='loginbtn' type='button'>登録</button>
+          <button className='registerbtn' type='button'>キャンセル</button>
+        </div>
+      </div>
     </div>
+
   );
 }
 

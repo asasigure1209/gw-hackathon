@@ -27,6 +27,7 @@ function Home() {
       <div className='global'>
         <div className='l-contents clearfix'>
           <div className='l-header c-header'>
+            <img className='c-logo' src='/kip_logo.png'></img>
             <CategoryCardList />
             <LogoutButton />
           </div>

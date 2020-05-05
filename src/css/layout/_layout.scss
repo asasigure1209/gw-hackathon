@@ -34,6 +34,24 @@
   margin: 0 auto;
 
 }
+.l-login{
+  float: right;
+  width: 100%;
+  max-width: 400px;
+  margin: 300px 0;
+}
+
+.l-lp{
+  float: left;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 80px 38px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+
 .clearfix::after {
   content: "";
   display: block;
