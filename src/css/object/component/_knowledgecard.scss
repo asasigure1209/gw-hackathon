@@ -57,22 +57,30 @@
   display:inline-block;
   flex-direction: row;
   padding: 7px 10px;
-  @include kip-font-body2;
+  @include kip-font-button;
   color: $kip-green;
   margin: 0 10px 0 0;
   border: 1px solid $kip-black-4;
   border-radius: 8px;
 }
-
+.useful:hover {
+  background-color: $kip-green;
+  color: $kip-white;
+}
 .c-knowledgecard .good{
   display:inline-block;
   flex-direction: row;
   padding: 7px 10px;
-  @include kip-font-body2;
+  @include kip-font-button;
   color: $kip-green;
   margin: 0;
   border: 1px solid $kip-black-4;
   border-radius: 8px;
+}
+
+.good:hover {
+  background-color: $kip-green;
+  color: $kip-white;
 }
 
 .c-right{

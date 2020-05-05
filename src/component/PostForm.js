@@ -33,15 +33,15 @@ function PostForm({ onClick }) {
   const isClick = content === "";
 
   return (
-    <div>
+    <div className='postmodal clearfix'>
       <img
-        style={{ width: "100px", height: "100px", objectFit: "cover" }}
+        style={{ width: "65px", height: "65px", objectFit: "cover" }}
         src='init_profile.png'
         alt='自分のアイコン'
       />
       <h2>Daisuke Hasegawa</h2>
       <div>
-        <select value={category} onChange={handleChangeCategory}>
+        <select className='c-categoryselect' value={category} onChange={handleChangeCategory}>
           <option value={categoryId.business}>ビジネススキル</option>
           <option value={categoryId.comminucation}>コミュニケーション</option>
           <option value={categoryId.mylife}>マイライフ</option>
