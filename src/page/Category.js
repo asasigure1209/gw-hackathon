@@ -49,10 +49,11 @@ function Category({ match }) {
               offset={4 * offset}
               limit={4}
             />
+            <button className='page' onClick={increment}>次</button>
             <button className='page' onClick={decrement} disabled={isClickSub}>
               前
             </button>
-            <button className='page' onClick={increment}>次</button>
+
             <PostButton onClick={openModal} />
             <PostModal isOpen={modalIsOpen} onClick={closeModal}></PostModal>
           </div>
