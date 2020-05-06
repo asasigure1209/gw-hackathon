@@ -5,8 +5,9 @@ import Home from "./page/Home";
 import Category from "./page/Category";
 import Login from "./page/Login";
 import Signup from "./page/Signup";
+import Auth from "./component/Auth";
 
-export const UserContext = createContext(["fe",() => {}]);
+export const UserContext = createContext([{},() => {}]);
 
 function App() {
   const [user, setUser] = useState("mic");
@@ -16,11 +17,13 @@ function App() {
       <Router>
         <Switch>
           <Route exact path='/login' component={Login} />
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/categories/:category' component={Category} />
-            <Route exact path='/signup' component={Signup} />
-          </Switch>
+          <Route exact path='/signup' component={Signup} />
+          <Auth>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route exact path='/categories/:category' component={Category} />
+            </Switch>
+          </Auth>
         </Switch>
       </Router>
     </UserContext.Provider>
