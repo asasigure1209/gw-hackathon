@@ -31,13 +31,11 @@ background-color: $kip-white;
 .postmodal textarea{
   width: 100%;
   max-width: 600px;
-  padding: 0px;
   @include kip-font-body1;
   color: $kip-black-1;
   margin: 0;
-  padding-bottom: 10px;
   outline: none;
-  padding: 8px 0px;
+  padding: 8px 0 30px;
   background-color: $kip-white;
   border: 1px solid $kip-white;
   resize: none;
