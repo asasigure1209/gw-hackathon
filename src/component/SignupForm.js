@@ -23,21 +23,24 @@ function SignupForm() {
           <img className='c-logo' src='/kip_logo.png'></img>
           <img className='l-mainimg c-mainimg' src='/kip_main.png'></img>
         </div>
-        <div className='l-login c-login'>
+        <div className='l-login c-signup'>
           <h2>Register</h2>
-          <img
-            src={imageSrc}
-            alt='登録するアカウント画像'
-            style={{ width: "65px", height: "65px", objectFit: "cover" }}
-          />
-          <input
-            type='file'
-            accept='image/*'
-            onChange={handleChangeImageFile}
-          ></input>
-          <label>User Image</label>
+          <label>
+            <img
+              src={imageSrc}
+              alt='登録するアカウント画像'
+              style={{ width: "65px", height: "65px", objectFit: "cover" }}
+            />
+            <input
+              className='fileupload'
+              type='file'
+              accept='image/*'
+              onChange={handleChangeImageFile}
+            ></input>
+            <label className='userimage'>User Image</label>
+          </label>
           <label>User Name</label>
-          <input type='text' name='name'></input>
+          <input className='username' type='text' name='name'></input>
           <label>Login ID</label>
           <input type='text' name='id'></input>
           <label>Password</label>
@@ -46,7 +49,7 @@ function SignupForm() {
           <button className='registerbtn' type='button'>キャンセル</button>
         </div>
       </div>
-    </div>
+    </div >
 
   );
 }

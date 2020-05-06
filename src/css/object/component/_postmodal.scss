@@ -1,15 +1,18 @@
-.Modal {
-  width: 100%;
-  max-width: 720px;
-  border-radius: 24px;
-}
-.postmodal{
-  height: 100%;
-  background-color: $kip-black-4;
-  margin: 0 auto;
-  pading: 20px;
+.modal {
 
+padding: 20px;
+background-color: $kip-white;
+ width: 720px;
+  border-radius: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
+  box-shadow: 0 2px 4px $kip-black-4, 0 2px 4px $kip-black-2;
+  outline: none;
 }
+
 .postmodal img{
   padding-right: 15px;
   border-radius: 50%;
@@ -28,12 +31,23 @@
 .postmodal textarea{
   width: 100%;
   max-width: 600px;
-  padding: 0px;
   @include kip-font-body1;
   color: $kip-black-1;
   margin: 0;
-  padding-bottom: 10px;
+  outline: none;
+  padding: 8px 0 30px;
+  background-color: $kip-white;
+  border: 1px solid $kip-white;
+  resize: none;
+  height:36px;
+  -webkit-transition: height .3s;
+  transition: height .3s;
 }
+
+.postmodal textarea:focus{
+  height: 100px;
+}
+
 .c-categoryselect {
   display:inline-block;
   flex-direction: row;
@@ -41,9 +55,25 @@
   @include kip-font-body2;
   background-color: $kip-green;
   color: $kip-white;
-  margin: 0 10px 0 0;
+
   border: 1px solid $kip-black-4;
   border-radius: 50vh;
   float: right;
 }
 
+.c-post {
+    display:inline-block;
+    flex-direction: row;
+    padding: 7px 10px;
+    @include kip-font-button;
+    background-color: $kip-green;
+    color: $kip-white;
+    margin: 0;
+    border: 1px solid $kip-black-4;
+    border-radius: 8px;
+    outline: none;
+    float: right;
+}
+.c-post:disabled {
+  background: $kip-black-3;
+}
