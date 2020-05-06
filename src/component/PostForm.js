@@ -1,22 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { categoryId } from "../constans/categories";
 import axios from "axios";
+import { UserContext } from "../App";
 
 const url = "http://localhost:8000/posts";
 
 function PostForm({ onClick }) {
   const [content, setContent] = useState("");
   const [category, setCategory] = useState(categoryId.etc);
+  const [user,] = useContext(UserContext);
 
   const sendPostData = () => {
-    let params = new URLSearchParams();
-    // ID仮置
-    params.append("user_id", 1);
-    params.append("content", content);
-    params.append("category", category);
+    console.log(user);
 
-    axios.post(url, params).then((res) => {
-      console.log("送信しました。");
+    axios.post(url,{
+        user_id: user.id,
+        content,
+        category
+      },{
+        headers: {
+          Authorization: `Bearer ${user.token}`
+      }}
+    ).then((res) => {
+      console.log("data", res.data);
     });
 
     onClick();
@@ -36,10 +42,10 @@ function PostForm({ onClick }) {
     <div className='postmodal clearfix'>
       <img
         style={{ width: "65px", height: "65px", objectFit: "cover" }}
-        src='init_profile.png'
+        src={user.image}
         alt='自分のアイコン'
       />
-      <h2>Daisuke Hasegawa</h2>
+      <h2>{user.name}</h2>
       <div>
         <select className='c-categoryselect' value={category} onChange={handleChangeCategory}>
           <option value={categoryId.business}>ビジネススキル</option>
