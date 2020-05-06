@@ -1,19 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
+import { UserContext } from "../App";
 
 const url = "http://localhost:8000/login";
 
 function LoginForm() {
+  const [, setUser] = useContext(UserContext);
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
+  let history = useHistory();
 
   const sendLoginData = () => {
+    console.log(id, password);
     axios.post(url, {
       uid: id,
       password: password,
     })
     .then((res) => {
-      console.log(res.data)
+      console.log(res.data);
+      setUser(res.data.user);
+      history.push("/");
     })
   }
 

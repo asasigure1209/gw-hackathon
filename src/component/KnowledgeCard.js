@@ -1,4 +1,5 @@
 import React from "react";
+import { categoryName } from "../constans/categories";
 
 function KnowledgeCard({ knowledge }) {
   const { user } = knowledge;
@@ -15,7 +16,7 @@ function KnowledgeCard({ knowledge }) {
         <h2>{user.name}</h2>
         <p className='contents'>{knowledge.content}</p>
       </div>
-      <p className='category'>{knowledge.category}</p>
+      <p className='category'>{categoryName[knowledge.category]}</p>
       <div className='c-right'>
         <p className='useful'>{knowledge.useful_count} 役に立った</p>
         <p className='good'>良いね: {knowledge.like_users.length}</p>
