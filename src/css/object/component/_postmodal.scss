@@ -10,6 +10,7 @@ background-color: $kip-white;
   -webkit-transform : translate(-50%,-50%);
   transform : translate(-50%,-50%);
   box-shadow: 0 2px 4px $kip-black-4, 0 2px 4px $kip-black-2;
+  outline: none;
 }
 
 .postmodal img{
@@ -35,6 +36,7 @@ background-color: $kip-white;
   color: $kip-black-1;
   margin: 0;
   padding-bottom: 10px;
+  outline: none;
 }
 .c-categoryselect {
   display:inline-block;
