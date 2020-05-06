@@ -73,8 +73,10 @@
   margin: 0px auto;
   text-align: center;
 }
-
 .fileupload {
   display: none;  /* 本来のファイル選択フォームは非表示に */
 }
-
+.c-signup img:hover {
+  border: 1px solid $kip-green;     /* 枠線(赤色) */
+  cursor: auto;           /* マウス形状(ポインタ) */
+}

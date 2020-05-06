@@ -13,3 +13,20 @@ margin: 0;
 padding: 60px 0 40px 0;
 }
 
+.page {
+  display: block;
+  flex-direction: row;
+  padding: 7px 10px;
+  margin: 0 0 0 5px ;
+  @include kip-font-button;
+  color: $kip-black-2;
+  border: 1px solid $kip-black-4;
+  transition: .3s;
+  border-radius: 8px;
+  float: right;
+}
+.page:disabled {
+  background: $kip-black-4;
+  color: $kip-black-3;
+  border: 1px solid $kip-black-4;
+}
