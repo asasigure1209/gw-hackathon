@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import KnowledgeCardList from "../component/KnowledgeCardList";
 import CategoryCardList from "../component/CategoryCardList";
 import { categoryName } from "../constans/categories";
@@ -28,7 +29,7 @@ function Category({ match }) {
       <div className='global'>
         <div className='l-contents clearfix'>
           <div className='l-header c-header'>
-            <a href='/'><img className='c-logo' src='/kip_logo.png'></img></a>
+            <Link to='/'><img className='c-logo' src='/kip_logo.png' alt="logo"></img></Link>
             <CategoryCardList />
             <LogoutButton />
           </div>
