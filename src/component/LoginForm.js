@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { UserContext } from "../App";
 
 const url = "http://localhost:8000/login";
@@ -47,7 +48,7 @@ function LoginForm() {
           <label>Password</label>
           <input type='password' name='password' value={password} onChange={handleChangePassword}></input>
           <button className='loginbtn' onClick={sendLoginData}>ログイン</button>
-          <button className='registerbtn' type='button'>会員登録はこちら</button>
+          <Link className='registerbtn' type='button' to={'/signup'}>会員登録はこちら</Link>
         </div>
       </div>
     </div>
