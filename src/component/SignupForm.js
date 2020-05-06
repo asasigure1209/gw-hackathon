@@ -3,10 +3,8 @@ import axios from "axios";
 import { UserContext } from "../App";
 import { useHistory } from "react-router-dom";
 
-const createObjectURL =
-  (window.URL || window.webkitURL).createObjectURL || window.createObjectURL;
 const initImage = "init_profile.png";
-const url = "http://localhost:8000/kip_users"
+const url = "http://localhost:8000/kip_users";
 
 function SignupForm() {
   const [imageSrc, setImageSrc] = useState(initImage);
@@ -31,12 +29,17 @@ function SignupForm() {
   }
 
   const handleChangeImageFile = (e) => {
-    console.log(e.target.files);
+    const file = e.target.files[0];
+    const reader = new FileReader();
 
-    const imageFiles = e.target.files;
-    const image_url = createObjectURL(imageFiles[0]);
-    setImageSrc(image_url);
-  };
+    reader.addEventListener("load", () => {
+      setImageSrc(reader.result);
+    }, false)
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  }
 
   const handleChangeId = (e) => {
     setId(e.target.value);
