@@ -65,10 +65,10 @@ function Home() {
               offset={4 * offset}
               limit={4}
             />
-            <button onClick={decrement} disabled={isClickSub}>
+            <button className='page' onClick={increment} disabled={isClickAdd}>次</button>
+            <button className='page' onClick={decrement} disabled={isClickSub}>
               前
             </button>
-            <button onClick={increment} disabled={isClickAdd}>次</button>
             <PostButton onClick={openModal} />
             <PostModal isOpen={modalIsOpen} onClick={closeModal}></PostModal>
           </div>
