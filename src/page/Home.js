@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import KnowledgeCardList from "../component/KnowledgeCardList";
 import CategoryCardList from "../component/CategoryCardList";
 import { categoryId } from "../constans/categories";
@@ -6,12 +6,29 @@ import postOrderTypes from "../constans/postOrderTypes";
 import PostButton from "../component/PostButton";
 import LogoutButton from "../component/LogoutButton";
 import PostModal from "../component/PostModal";
+import axios from "axios";
+import { UserContext } from "../App";
+
+const url = "http://localhost:8000/posts_count";
 
 function Home() {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [offset, setOffset] = useState(0);
+  const [count, setCount] = useState(0)
+  const [user,] = useContext(UserContext);
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
+
+  useEffect(() => {
+    axios.get(url, {
+      headers: {
+        Authorization: `Bearer ${user.token}`
+      }
+    })
+    .then((res) => {
+      setCount(res.data.count);
+    },[user])
+  })
 
   const increment = () => {
     setOffset(offset + 1);
@@ -21,6 +38,7 @@ function Home() {
   };
 
   const isClickSub = offset <= 0;
+  const isClickAdd = count <= ((offset + 1) * 4);
 
   return (
     <div className='App'>
@@ -50,7 +68,7 @@ function Home() {
             <button onClick={decrement} disabled={isClickSub}>
               前
             </button>
-            <button onClick={increment}>次</button>
+            <button onClick={increment} disabled={isClickAdd}>次</button>
             <PostButton onClick={openModal} />
             <PostModal isOpen={modalIsOpen} onClick={closeModal}></PostModal>
           </div>
