@@ -35,7 +35,7 @@ function Category({ match }) {
             <LogoutButton />
           </div>
           <div className='l-main c-main'>
-            <h1>{categoryName[category]}で一番役に立ったナレッジ</h1>
+            <h1>{categoryName[category]}で一番役に立っているナレッジ</h1>
             <KnowledgeCardList
               type={postOrderTypes.popular}
               category={category}
@@ -49,10 +49,11 @@ function Category({ match }) {
               offset={4 * offset}
               limit={4}
             />
-            <button onClick={decrement} disabled={isClickSub}>
+            <button className='page' onClick={increment}>次</button>
+            <button className='page' onClick={decrement} disabled={isClickSub}>
               前
             </button>
-            <button onClick={increment}>次</button>
+
             <PostButton onClick={openModal} />
             <PostModal isOpen={modalIsOpen} onClick={closeModal}></PostModal>
           </div>
