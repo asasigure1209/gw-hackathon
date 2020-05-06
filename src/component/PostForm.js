@@ -53,8 +53,8 @@ function PostForm({ onClick }) {
           <option value={categoryId.mylife}>マイライフ</option>
           <option value={categoryId.etc}>つぶやき</option>
         </select>
-        <textarea value={content} onChange={handleChangeContent}></textarea>
-        <button onClick={sendPostData} disabled={isClick}>
+        <textarea placeholder="ここにナレッジを入力しよう" maxlength="140" value={content} onChange={handleChangeContent} ></textarea>
+        <button className='c-post' onClick={sendPostData} disabled={isClick}>
           投稿する
         </button>
       </div>

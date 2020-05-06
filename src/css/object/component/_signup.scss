@@ -19,7 +19,7 @@
   text-align: center;
 }
 
-.c-signup label{
+.c-signup label {
   @include kip-font-caption;
   color: $kip-green;
   margin: 0;
@@ -47,7 +47,7 @@
   border: 1px solid $kip-black-4;
   transition: .3s;
   border-radius: 8px;
-
+  box-shadow: 0px 1px 10px $kip-black-4;
 }
 .c-signup .registerbtn {
   display: block;
@@ -58,5 +58,23 @@
   border: 1px solid $kip-black-4;
   transition: .3s;
   border-radius: 8px;
+}
+
+.c-signup img {
+  display: block;
+  border: 1px solid $kip-alto-1;
+  box-sizing: border-box;
+  border-radius: 50vh;
+  margin: 0px auto;
+  margin-bottom: 5px;
+}
+.userimage {
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.fileupload {
+  display: none;  /* 本来のファイル選択フォームは非表示に */
 }
 

@@ -6,7 +6,7 @@ Modal.setAppElement("#root");
 
 function PostModal({ isOpen, onClick }) {
   return (
-    <Modal isOpen={isOpen} onRequestClose={onClick}>
+    <Modal className='modal' isOpen={isOpen} onRequestClose={onClick}>
       <PostForm onClick={onClick}></PostForm>
     </Modal>
   );
