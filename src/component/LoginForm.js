@@ -48,7 +48,7 @@ function LoginForm() {
           <label>Password</label>
           <input type='password' name='password' value={password} onChange={handleChangePassword}></input>
           <button className='loginbtn' onClick={sendLoginData}>ログイン</button>
-          <Link className='registerbtn' type='button' to={'/signup'}>会員登録はこちら</Link>
+          <div className='center'><Link className='registerbtn' type='button' to={'/signup'}>会員登録はこちら</Link></div>
         </div>
       </div>
     </div>
