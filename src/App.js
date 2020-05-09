@@ -6,6 +6,7 @@ import Category from "./page/Category";
 import Login from "./page/Login";
 import Signup from "./page/Signup";
 import Auth from "./component/Auth";
+import NotFound from "./page/NotFound";
 
 export const UserContext = createContext([{},() => {}]);
 
@@ -18,6 +19,7 @@ function App() {
         <Switch>
           <Route exact path='/login' component={Login} />
           <Route exact path='/signup' component={Signup} />
+          <Route exact path='/notfound' component={NotFound} />
           <Auth>
             <Switch>
               <Route exact path='/' component={Home} />
