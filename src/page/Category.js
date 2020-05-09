@@ -37,9 +37,11 @@ function Category({ match }) {
   })
 
   const increment = () => {
+    window.scrollTo(0, 0);
     setOffset(offset + 1);
   };
   const decrement = () => {
+    window.scrollTo(0, 0);
     setOffset(offset - 1);
   };
 
