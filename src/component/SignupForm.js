@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { UserContext } from "../App";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 const initImage = "init_profile.png";
 const url = "http://localhost:8000/kip_users";
@@ -84,7 +84,7 @@ function SignupForm() {
           <label>Password</label>
           <input type='password' name='password' value={password} onChange={handleChangePassword}></input>
           <button className='loginbtn' type='button' onClick={sendSingupData}>登録</button>
-          <button className='registerbtn' type='button'>キャンセル</button>
+          <div className='center'><Link to="/" className='registerbtn' type='button'>キャンセル</Link></div>
         </div>
       </div>
     </div >
