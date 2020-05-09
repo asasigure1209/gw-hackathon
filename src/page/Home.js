@@ -10,6 +10,7 @@ import axios from "axios";
 import { UserContext } from "../App";
 
 const url = "http://localhost:8000/posts_count";
+const listNumber = 4;
 
 function Home() {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -38,7 +39,7 @@ function Home() {
   };
 
   const isClickSub = offset <= 0;
-  const isClickAdd = count <= ((offset + 1) * 4);
+  const isClickAdd = count <= ((offset + 1) * listNumber);
 
   return (
     <div className='App'>
@@ -62,8 +63,8 @@ function Home() {
             <KnowledgeCardList
               type={postOrderTypes.new}
               category={categoryId.all}
-              offset={4 * offset}
-              limit={4}
+              offset={listNumber * offset}
+              limit={listNumber}
             />
             <button className='page' onClick={increment} disabled={isClickAdd}>次</button>
             <button className='page' onClick={decrement} disabled={isClickSub}>
