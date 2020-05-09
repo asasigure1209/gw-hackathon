@@ -33,8 +33,12 @@ function Category({ match }) {
     })
     .then((res) => {
       setCount(res.data.count);
-    },[user, category])
+    }, [user, category])
   })
+
+  useEffect(() => {
+    setOffset(0)
+  }, [category])
 
   const increment = () => {
     window.scrollTo(0, 0);
