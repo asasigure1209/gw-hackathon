@@ -5,6 +5,7 @@ import { UserContext } from "../App";
 
 const likeUrl = "http://localhost:8000/likes";
 const usefulUrl = "http://localhost:8000/usefuls";
+const postUrl = "http://localhost:8000/posts";
 
 function KnowledgeCard({ knowledge }) {
   const { user } = knowledge;
@@ -35,12 +36,29 @@ function KnowledgeCard({ knowledge }) {
       },{
         headers: {
           Authorization: `Bearer ${viewer.token}`
-      }}
+        }
+      }
     ).then((res) => {
       //再レンダリングを強制する
       setViewer({...viewer});
     });
   };
+
+  const deletePost = () => {
+    console.log("user_id", viewer.id);
+    console.log("knowledge user id", user.id);
+    axios.delete(`${postUrl}/${knowledge.id}`, {
+      params: {
+        user_id: viewer.id,
+      },
+      headers: {
+        Authorization: `Bearer ${viewer.token}`
+      }
+    }).then((res) => {
+      //再レンダリングを強制する
+      setViewer({...viewer});
+    })
+  }
 
   return (
     <div className='c-knowledgecard clearfix'>
@@ -52,6 +70,7 @@ function KnowledgeCard({ knowledge }) {
       <div className='c-knowledge'>
         <p className='created'>{knowledge.created_at}</p>
         <h2>{user.name}</h2>
+        {viewer.id === user.id ? <button onClick={deletePost}>削除</button> : null}
         <p className='contents'>{knowledge.content}</p>
       </div>
       <p className='category'>{categoryName[knowledge.category]}</p>
