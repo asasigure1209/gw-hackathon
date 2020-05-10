@@ -8,7 +8,7 @@ import { Redirect } from 'react-router-dom';
 const Auth = ({ children }) => {
   const [user,] = useContext(UserContext);
   if (!user || !user.token) {
-    return <Redirect to={'/login'} />
+    return <Redirect to={'/'} />
   }
 
   return children;

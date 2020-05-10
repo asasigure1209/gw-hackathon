@@ -21,7 +21,7 @@ function LoginForm() {
     .then((res) => {
       console.log(res.data);
       setUser(res.data.user);
-      history.push("/");
+      history.push("/home");
     })
   }
 

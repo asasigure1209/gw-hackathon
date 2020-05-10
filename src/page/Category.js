@@ -57,7 +57,7 @@ function Category({ match }) {
       <div className='global'>
         <div className='l-contents clearfix'>
           <div className='l-header c-header'>
-            <Link to='/'><img className='c-logo' src='/kip_logo.png' alt="logo"></img></Link>
+            <Link to='/home'><img className='c-logo' src='/kip_logo.png' alt="logo"></img></Link>
             <CategoryCardList />
             <LogoutButton />
           </div>
